@@ -1,27 +1,25 @@
-sass Styles.scss Styles.css .search,
+.search,
 .search-result {
     width: 361px;
 }
 
 .search {
     position: relative;
-    width: 361px;
     height: var(--search-height);
     padding-left: 16px;
+    display: flex;
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
     border: 1.5px solid transparent;
-    display: flex;
 
     input {
         flex: 1;
         height: 100%;
         color: var(--black);
         font-size: 1.6rem;
-        font-family: var(--font-family);
-        padding: 12px 0;
         caret-color: var(--primary);
         background-color: transparent;
+        font-family: var(--font-family);
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
@@ -46,6 +44,7 @@ sass Styles.scss Styles.css .search,
 .search-title {
     padding: 5px 12px;
     font-size: 1.4rem;
+    font-weight: 600;
     color: rgba(22, 24, 35, 0.5);
 }
 
@@ -59,7 +58,7 @@ sass Styles.scss Styles.css .search,
 }
 
 .loading {
-    animation: spinner 0.4s linear infinite;
+    animation: spinner 0.8s linear infinite;
 }
 
 @keyframes spinner {
@@ -72,6 +71,9 @@ sass Styles.scss Styles.css .search,
 }
 
 .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: var(--search-button-width);
     height: 100%;
     border-top-right-radius: var(--search-border-radius);
